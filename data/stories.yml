@@ -1,0 +1,36 @@
+version: "3.1"
+
+stories:
+
+- story: weather without city
+  steps:
+  - intent: weather_without_city
+  - action: utter_ask_city
+  - intent: weather_with_city
+  - action: action_weather_api
+
+
+- story: weather with city
+  steps:
+  - intent: weather_with_city
+  - action: action_weather_api
+
+- story: play rock paper scissors
+  steps:
+  - intent: greet
+  - action: utter_play
+  - intent: inform
+  - action: action_play_rps
+  - action: utter_play_again
+
+- story: play again
+  steps:
+  - action: utter_play_again
+  - intent: affirm
+  - action: utter_play
+
+- story: don't play again
+  steps:
+  - action: utter_play_again
+  - intent: deny
+  - action: utter_goodbye

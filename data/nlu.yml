@@ -1,0 +1,86 @@
+version: "3.1"
+
+nlu:
+
+# example questions of when location is not given
+- intent: weather_with_city
+  examples: |
+    - What is the temperature in [New York](location)
+    - how's the weather in [Newark](location)?
+    - What is the weather today in [Mumbai](location)?
+    - Hows the weather in [Paris](location)?
+    - weather [Boston](location)?
+    - [Virginia](location)?
+    - May I know the Temperature today in [Harrison](location)?
+    - Whats the temp like in [Texas](location)
+    - Can you tell me the weather in [London](location)
+    - weather today [Chicago](location)
+    - whats the weather like in [Michigan](location)
+
+- intent: weather_without_city
+  examples: | 
+    - What is the weather today?
+    - Hows the weather?
+    - weather?
+    - May I know the Temperature today?
+    - Whats the temp like?
+    - Can you tell me the weather?
+    - weather today
+    - whats the weather like
+
+- intent: inform
+  examples: |
+    - [rock](choice)
+    - [paper](choice)
+    - [scissors](choice)
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
